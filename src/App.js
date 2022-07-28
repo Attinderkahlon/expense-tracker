@@ -1,5 +1,18 @@
+import { Route, Routes } from "react-router-dom"
+import Main from "./components/Main"
+import Nav from "./components/Nav"
+import SideBar from "./components/SideBar"
+
 function App() {
-  return <div className="border border-red-400">Expense Tracker</div>
+  return (
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/sidebar" element={<SideBar />} />
+      </Routes>
+    </>
+  )
 }
 
 export default App
