@@ -1,22 +1,10 @@
 import React from "react"
-import SideBar from "./SideBar"
 import ChartContainer from "./containers/ChartContainer"
+import data from "../expenses.json"
 
 const Main = () => {
-  const expenses = [
-    {
-      name: "Phone Recharge",
-      date: "10 Jan 2022",
-      amount: 50,
-    },
-    {
-      name: "Grocery",
-      date: "20 Feb 2022",
-      amount: "120",
-    },
-  ]
   return (
-    <div className="w-2/3 flex flex-col gap-6 border-2 border-blue-500 h-full">
+    <div className="w-full flex flex-col gap-6 border-2 text-white border-blue-500 bg-slate-900 h-screen p-5">
       <input
         type="search"
         id="search"
@@ -24,7 +12,7 @@ const Main = () => {
         placeholder="Search"
       />
       <div>
-        <div className="border-4 border-red-400 flex w-full h-64 gap-6">
+        <div className="border-1  border-red-400 flex w-full h-64 gap-6">
           <ChartContainer>
             <div>Hello World 2</div>
           </ChartContainer>
@@ -41,15 +29,14 @@ const Main = () => {
           </div>
         </div>
 
-        {expenses.map((expense) => (
-          <div className="m-4 w-56 h-full flex gap-4">
-            <h2 className="py-6">{expense.name}</h2>
+        {data.map((expense) => (
+          <div className="m-2 p-8 w-full flex justify-around ">
+            <h2>{expense.name}</h2>
             <h3>{expense.date}</h3>
             <h3>{expense.amount}</h3>
           </div>
         ))}
       </div>
-      <SideBar />
     </div>
   )
 }

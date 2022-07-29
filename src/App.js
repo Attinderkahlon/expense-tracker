@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <Nav />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/sidebar" element={<SideBar />} />
-      </Routes>
+      </Routes> */}
     </>
   )
 }

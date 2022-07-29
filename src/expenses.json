@@ -1,10 +1,12 @@
 [
   {
+    "id": 1,
     "name": "Phone Recharge",
     "date": "10 Jan 2022",
-    "amount": 50
+    "amount": "50"
   },
   {
+    "id": 2,
     "name": "Grocery",
     "date": "20 Feb 2022",
     "amount": "120"
