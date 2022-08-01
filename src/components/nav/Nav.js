@@ -1,6 +1,6 @@
 import React from "react"
-import Main from "./Main"
-import SideBar from "./SideBar"
+// import Main from "../Main"
+// import SideBar from "../SideBar"
 import { Link } from "react-router-dom"
 
 const Nav = () => {
@@ -10,8 +10,8 @@ const Nav = () => {
         <div className="hidden sm:flex m-4 w-56 h-full flex-col gap-4">
           <h2 className="py-6">LOGO</h2>
           <Link to="/">Home</Link>
-          <Link to="/wallet">Wallet</Link>
-          <Link to="/profile">Profile</Link>
+          <Link to="/nav/wallet">Wallet</Link>
+          <Link to="/nav/profile">Profile</Link>
 
           <button
             id="menu-btn"
@@ -26,14 +26,10 @@ const Nav = () => {
           <div
             id="menu"
             className="absolute flex flex-col items-center self-end   py-8 mt-10 space-y-6 font-bold  text-white border-red-500 bg-slate-900 sm:white sm:w-auto sm:self-center left-2 right-2 drop-shadow-sm"
-          >
-            <Link to="/">Home</Link>
-            <Link to="/wallet">Wallet</Link>
-            <Link to="/profile">Profile</Link>
-          </div>
+          ></div>
         </div>
-        <Main />
-        <SideBar />
+        {/* <Main />
+        <SideBar /> */}
       </div>
     </>
   )
